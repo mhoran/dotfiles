@@ -4,5 +4,6 @@ alias ga='(git add . && git add -u); git status -sb'
 [[ -s "/home/mhoran/.rvm/scripts/rvm" ]] && source "/home/mhoran/.rvm/scripts/rvm"
 
 alias redis_delall="redis-cli keys \* | awk '{print $1}' | xargs redis-cli del"
+alias ppjson='python -mjson.tool'
 
 export PATH=$PATH:$HOME/node/bin
