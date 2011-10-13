@@ -1,3 +1,5 @@
+call pathogen#infect()
+
 set autoindent
 set autoread
 set autowrite

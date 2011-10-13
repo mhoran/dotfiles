@@ -1,9 +1,9 @@
 alias ls='/bin/ls -Fh --color'
 alias ga='(git add . && git add -u); git status -sb'
+alias sudoedit='sudo -e'
 
-[[ -s "/home/mhoran/.rvm/scripts/rvm" ]] && source "/home/mhoran/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-alias redis_delall="redis-cli keys \* | awk '{print $1}' | xargs redis-cli del"
-alias ppjson='python -mjson.tool'
+alias -g PJ="|python -mjson.tool"
 
-export PATH=$PATH:$HOME/node/bin
+export PATH=$PATH:$HOME/node/bin:./node_modules/.bin

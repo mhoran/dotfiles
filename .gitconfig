@@ -25,3 +25,5 @@
 	br = branch
 [branch]
 	autosetupmerge = true
+[push]
+	default = current
