@@ -11,4 +11,3 @@ map <C-Z> <Nop>
 highlight CursorLine guibg=#181818
 set number
 set cursorline
-set noballooneval
