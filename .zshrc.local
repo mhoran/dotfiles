@@ -2,8 +2,11 @@ alias ls='/bin/ls -Fh --color'
 alias ga='(git add . && git add -u); git status -sb'
 alias sudoedit='sudo -e'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 alias -g PJ="|python -mjson.tool"
 
-export PATH=$PATH:$HOME/node/bin:./node_modules/.bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export ANDROID_HOME=$HOME/android
+export NODE_PATH=$HOME/node:$HOME/node/lib/node_modules
+
+export PATH=$PATH:$HOME/node/bin:./node_modules/.bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
