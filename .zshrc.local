@@ -1,6 +1,7 @@
 alias ls='/bin/ls -Fh --color'
 alias ga='(git add . && git add -u); git status -sb'
 alias sudoedit='sudo -e'
+alias be='bundle exec'
 
 alias -g PJ="|python -mjson.tool"
 
