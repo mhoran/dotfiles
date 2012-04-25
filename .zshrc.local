@@ -11,3 +11,5 @@ export ANDROID_HOME=$HOME/android
 export NODE_PATH=$HOME/node:$HOME/node/lib/node_modules
 
 export PATH=$PATH:$HOME/node/bin:./node_modules/.bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+export GREP_OPTIONS="--color=auto"

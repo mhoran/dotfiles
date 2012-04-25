@@ -1,0 +1,12 @@
+[grab]
+device = /dev/video0
+text = "%Y-%m-%d %H:%M:%S"
+delay = 30
+
+[ftp]
+host = matthoran.com
+user = mhoran
+dir  = matthoran.com/workcam
+file = workcam.jpeg
+tmp  = uploading.jpeg
+ssh = 1
