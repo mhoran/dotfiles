@@ -1,6 +1,6 @@
 [user]
 	name = Matthew Horan
-	email = matthew.horan@livestream.com
+	email = matt@matthoran.com
 [color]
 	branch = auto
 	status = auto
@@ -23,7 +23,5 @@
 	ci = commit
 	co = checkout
 	br = branch
-[branch]
-	autosetupmerge = true
 [push]
-	default = current
+	default = simple
