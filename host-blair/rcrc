@@ -1,2 +1,2 @@
 SYMLINK_DIRS=vim
-TAGS=xorg
+TAGS="xorg ruby"
