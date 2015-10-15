@@ -1,2 +1,2 @@
-SYMLINK_DIRS=vim
+SYMLINK_DIRS=Vundle.vim
 TAGS="xorg ruby"
