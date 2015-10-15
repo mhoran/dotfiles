@@ -6,8 +6,8 @@ esac
 PROMPT='[%{[0;31m%}%U%n@%m%u%{[0m%}] %~%# '
 PS2='[%_] %# '
 HISTFILE=~/.zsh_history
-SAVEHIST=1000
-HISTSIZE=1000
+HISTSIZE=2000
+SAVEHIST=$HISTSIZE
 READNULLCMD=less
 EDITOR=vim
 VISUAL=vim
