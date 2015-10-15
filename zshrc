@@ -13,16 +13,12 @@ EDITOR=vim
 VISUAL=vim
 LESS=eRCM
 PAGER=less
-hosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
 
 export EDITOR VISUAL LESS PAGER
 
-compctl -k hosts ping
-compctl -k hosts ssh
-compctl -f + -k hosts -S : scp
-compctl -D -f + -H 0 ''
+autoload -U compinit && compinit
 
-setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
 setopt AUTO_CD
 setopt AUTO_LIST
 setopt CORRECT
@@ -31,6 +27,6 @@ setopt HIST_IGNORE_DUPS
 
 bindkey -e
 
-if [ -f $HOME/.zshrc.local ];  then
+if [ -f $HOME/.zshrc.local ]; then
   source $HOME/.zshrc.local
 fi
