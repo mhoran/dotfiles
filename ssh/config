@@ -1,5 +1,0 @@
-HashKnownHosts no
-
-Host *
-  ControlPath ~/.ssh/ctrl-%r-%h-%p
-  ControlMaster auto
