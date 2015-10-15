@@ -1,4 +1,4 @@
-alias ls='/bin/ls -Fh --color'
+alias ls='/bin/ls -Fh --color=auto'
 alias -g PJ="|python -mjson.tool"
 export PATH=~/bin:/opt/android-sdk-linux/platform-tools:$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
