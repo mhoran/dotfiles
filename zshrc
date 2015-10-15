@@ -35,13 +35,18 @@ if ls --color -d . &>/dev/null 2>&1
 then
   # Linux Style
   export LS_COLORS=$LS_COLORS
+  alias ls='/bin/ls -Fh --color=auto'
 else
   # BSD Style
   export LSCOLORS=$LSCOLORS
+  export CLICOLOR=1
+  alias ls='/bin/ls -Fh'
 fi
 
 # Use same colors for autocompletion
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+export GREP_OPTIONS="--color=auto"
 
 if [ -f $HOME/.zshrc.local ]; then
   source $HOME/.zshrc.local
