@@ -1,0 +1,7 @@
+screen -ls
+
+echo
+
+newmail
+
+export GPG_TTY=`tty`
