@@ -1,0 +1,128 @@
+set mbox_type=Maildir
+
+set folder=imap://matthoran.com/
+set spoolfile=+INBOX
+set postponed=+drafts
+set record=+sent
+set sort_browser=reverse-date
+set tunnel="/usr/local/libexec/dovecot/imap 2>/dev/null"
+
+subscribe freebsd-announce@freebsd\.org
+subscribe announce@freebsd\.org
+subscribe freebsd-security@freebsd\.org
+subscribe announce@openbsd\.org
+subscribe security-announce@openbsd\.org
+subscribe ports-security@openbsd\.org
+subscribe crew@ccs\.neu\.edu
+subscribe crew@lists\.ccs\.neu\.edu
+
+folder-hook =freebsd 'push <delete-pattern>~r>1m!~F<enter>'
+folder-hook . 'exec collapse-all'
+
+macro pager $ "<exit><sync-mailbox>" \
+  "save changes to mailbox"
+
+macro index,pager c "<change-folder>?<toggle-mailboxes>" \
+  "open a different folder"
+
+macro index C "<copy-message>?<toggle-mailboxes>" \
+  "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" \
+  "move a message to a mailbox"
+
+macro compose A "<attach-message>?<toggle-mailboxes>" \
+  "attach message(s) to this message"
+
+message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' \
+  "exec check-traditional-pgp"
+message-hook "(~N|~O) ~f notifications@github.com" \
+  "push '<pipe-message>read-github-notification\n'"
+
+set from=matt@matthoran.com
+set realname="Matt Horan"
+set envelope_from
+alternates m(att|horan)@weehours\.com
+alternates m?horan(\.m)?@(ccs\.)?neu\.edu
+alternates matthewshoran@gmail\.com
+set autoedit
+set edit_headers
+set delete
+set include
+set pager_index_lines=6
+set pager_stop
+set reply_to
+set sort=threads
+set strict_threads
+set reverse_alias
+set mime_forward
+unset markers
+unset beep
+unset bounce_delivered
+unset confirmappend
+unset confirmcreate
+unset abort_nosubject
+unset abort_unmodified
+unset postpone
+unset mark_old
+unset wait_key
+unset resolve
+unset recall
+set index_format="%4C %{%b %d} %Z %-16.16n %?M?(%M) ?%s"
+set display_filter=mail-to-filter
+set imap_idle
+set imap_check_subscribed
+set timeout=10
+
+alternative_order text/plain
+auto_view text/html
+
+ignore *
+unignore From: Subject To Cc Date
+
+color normal     white         black
+color hdrdefault red           black
+color quoted     brightblue    black
+color signature  red           black
+color indicator  brightyellow  red
+color error      brightred     black
+color status     yellow        blue
+color tree       magenta       black
+color tilde      magenta       black
+color message    brightcyan    black
+color markers    brightcyan    black
+color attachment brightmagenta black
+color search     black         green
+color header     brightred     black "^(From|Subject):"
+color body       magenta       black "(ftp|http)://[^ ]+"
+color body       magenta       black "[-a-z_0-9.]+@[-a-z_0-9.]+"
+color underline  brightgreen   black
+
+set pgp_decode_command="gpg --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --armor \
+  --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --armor \
+  --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose \
+  --output - --encrypt --textmode --armor --always-trust \
+  --encrypt-to 0xC6472D97 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --batch --quiet --no-verbose \
+  --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust \
+  --encrypt-to 0xC6472D97 -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint \
+  --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons \
+  --list-keys %r" 
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons \
+  --list-secret-keys %r" 
+set pgp_sign_as=0xC6472D97!
+set pgp_replysign
+set pgp_replysignencrypted
+set pgp_use_gpg_agent
+
+source ~/.mutt_aliases
+set alias_file=~/.mutt_aliases
+set query_command="goobook query '%s'"
