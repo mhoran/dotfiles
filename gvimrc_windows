@@ -1,0 +1,14 @@
+set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=L
+set guioptions-=t
+set mouse=
+set lines=37
+set columns=135
+set gfn=Bitstream_Vera_Sans_Mono:h12:cDEFAULT
+map <C-Z> <Nop>
+highlight CursorLine guibg=#181818
+set number
+set cursorline
+colorscheme torte
