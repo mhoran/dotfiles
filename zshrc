@@ -23,7 +23,7 @@ setopt AUTO_CD
 setopt AUTO_LIST
 setopt CORRECT
 setopt EXTENDED_GLOB
-setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 
 bindkey -e
 
