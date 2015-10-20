@@ -57,16 +57,21 @@ map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Open a file in a new tab from the current file's path
 map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+let mapleader = ","
+let maplocalleader = ";"
+
+let g:ctrlp_map = '<leader>f'
+
+" https://github.com/kien/ctrlp.vim/issues/174
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " File tree browser
 map \           :NERDTreeToggle<CR>
 
 " File tree browser showing current file - pipe (shift-backslash)
 map \|          :NERDTreeFind<CR>
 
-let g:ctrlp_map = ',f'
 
-" https://github.com/kien/ctrlp.vim/issues/174
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Start editing where you left off (thanks Sean)
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
