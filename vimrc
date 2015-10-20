@@ -14,6 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +59,17 @@ map <F12> :set nospell
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Open a file in a new tab from the current file's path
 map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" File tree browser
+map \           :NERDTreeToggle<CR>
+
+" File tree browser showing current file - pipe (shift-backslash)
+map \|          :NERDTreeFind<CR>
+
+let g:ctrlp_map = ',f'
+
+" https://github.com/kien/ctrlp.vim/issues/174
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Start editing where you left off (thanks Sean)
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
