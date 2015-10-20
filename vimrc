@@ -80,6 +80,8 @@ map \|          :NERDTreeFind<CR>
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
+autocmd QuickFixCmdPost *grep* cwindow
+
 " Start editing where you left off (thanks Sean)
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
