@@ -1,6 +1,7 @@
 [user]
 	name = Matthew Horan
 	email = matt@matthoran.com
+	signingkey = C6472D97
 [color]
 	branch = auto
 	status = auto
@@ -26,3 +27,5 @@
 	co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
 [push]
 	default = simple
+[commit]
+	gpgsign = true
