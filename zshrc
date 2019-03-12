@@ -46,7 +46,7 @@ fi
 # Use same colors for autocompletion
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-export GREP_OPTIONS="--color=auto"
+alias grep='grep --color=auto'
 
 if [ -f $HOME/.zshrc.local ]; then
   source $HOME/.zshrc.local
