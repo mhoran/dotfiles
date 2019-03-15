@@ -1,0 +1,24 @@
+ServerAliveInterval 60
+HashKnownHosts no
+
+Host challenger.matthoran.com challenger 
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  Compression yes
+  ForwardAgent yes
+
+Host ipad.wherestheparty.at ipad
+  Hostname ipad.wherestheparty.at
+  ProxyCommand ssh -W %h:%p matthoran.com
+  Port 8022
+
+Host irc.wherestheparty.at irc
+  Hostname irc.wherestheparty.at
+  ProxyCommand ssh -W %h:%p matthoran.com
+  Port 8022
+
+Host matthoran.com
+  ForwardAgent yes
+
+Host mike-burns.com
+  Port 8022
