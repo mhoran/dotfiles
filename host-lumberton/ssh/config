@@ -2,5 +2,5 @@ HashKnownHosts no
 ServerAliveInterval 60
 
 Host blair.matthoran.com blair
-  ProxyCommand ssh -W %h:%p challenger.matthoran.com
+  ProxyJump challenger.matthoran.com
   Hostname blair.local
