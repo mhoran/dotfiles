@@ -28,3 +28,4 @@
 	default = simple
 [core]
 	hooksPath = /home/mhoran/workspace/git-hooks-core
+	excludesfile = /home/mhoran/.gitignore_global
