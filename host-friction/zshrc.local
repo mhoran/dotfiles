@@ -1,7 +1,8 @@
+export PATH=~/bin:~/.local/bin:$PATH
+export GPG_TTY=`tty`
+
 tmux ls
 
 echo
 
 newmail
-
-export GPG_TTY=`tty`
