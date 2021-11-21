@@ -96,3 +96,10 @@ set cinoptions=:0,t0,+4,(4
 au BufNewFile,BufReadPost *.c setl noet sw=0 ts=8
 au BufNewFile,BufReadPost *.h setl noet sw=0 ts=8
 autocmd FileType ruby,eruby set noballooneval
+
+" Add format option 'w' to add trailing white space, indicating that paragraph
+" continues on next line. This is to be used with mutt's 'text_flowed' option.
+augroup mail_trailing_whitespace " {
+    autocmd!
+    autocmd FileType mail setlocal formatoptions+=w
+augroup END " }
