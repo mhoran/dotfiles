@@ -17,6 +17,7 @@ subscribe crew@ccs\.neu\.edu
 subscribe crew@lists\.ccs\.neu\.edu
 
 folder-hook =freebsd 'push <delete-pattern>~r>1m!~F<enter>'
+folder-hook =trash 'push <delete-pattern>~r>1m!~F<enter>'
 folder-hook . 'exec collapse-all'
 
 macro pager $ "<exit><sync-mailbox>" \
@@ -33,8 +34,8 @@ macro index M "<save-message>?<toggle-mailboxes>" \
 macro compose a "<attach-file>?<change-dir><kill-line>~/<enter>" \
   "attach file(s) to this message"
 
-#message-hook "(~N|~O) ~f notifications@github.com" \
-#  "push '<pipe-message>read-github-notification\n'"
+message-hook "(~N|~O) ~f notifications@github.com" \
+  "push '<pipe-message>read-github-notification\n'"
 
 set from=matt@matthoran.com
 set realname="Matt Horan"
@@ -53,6 +54,8 @@ set sort=threads
 set strict_threads
 set reverse_alias
 set mime_forward
+set text_flowed
+set abort_noattach=ask-yes
 unset markers
 unset beep
 unset bounce_delivered
@@ -71,6 +74,7 @@ set imap_idle
 set imap_check_subscribed
 set timeout=10
 unset mail_check_recent
+unset ssl_starttls
 
 alternative_order text/plain
 auto_view text/html
