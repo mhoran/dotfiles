@@ -1,3 +1,0 @@
-export PATH=~/bin:~/go/bin:$PATH
-export GOPATH=~/workspace/go
-alias open=xdg-open
