@@ -1,4 +1,4 @@
-screen -ls
+tmux ls
 
 echo
 
