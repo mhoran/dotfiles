@@ -27,3 +27,5 @@
 	co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
 [push]
 	default = simple
+[pull]
+	rebase = false
