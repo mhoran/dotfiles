@@ -1,3 +1,2 @@
-export PATH=~/bin:~/go/bin:~/workspace/go/bin:~/.local/bin:$PATH
-export GOPATH=~/workspace/go
+export PATH=~/bin:~/go/bin:/usr/local/go/bin:~/.local/bin:$PATH
 alias open=xdg-open
