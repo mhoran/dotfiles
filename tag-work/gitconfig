@@ -32,3 +32,5 @@
 	insteadOf = https://github.com/betty-labs
 [pull]
 	rebase = false
+[init]
+	templatedir = /home/mhoran/.git-template
