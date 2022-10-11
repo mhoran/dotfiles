@@ -22,3 +22,6 @@ Host matthoran.com
 
 Host mike-burns.com
   Port 5223
+
+Host 192.168.2.5
+  KexAlgorithms +diffie-hellman-group1-sha1
