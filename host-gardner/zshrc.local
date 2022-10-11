@@ -1,0 +1,9 @@
+export PATH=~/bin:~/go/bin:/usr/local/go/bin:~/.local/bin:~/.rbenv/bin:$PATH
+export GIT_DUET_CO_AUTHORED_BY=1 GIT_DUET_GLOBAL=1 
+
+alias open=xdg-open
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+eval "$(rbenv init - zsh)"

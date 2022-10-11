@@ -1,2 +1,0 @@
-export PATH=~/bin:~/go/bin:/usr/local/go/bin:~/.local/bin:$PATH
-alias open=xdg-open

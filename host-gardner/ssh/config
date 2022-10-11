@@ -1,6 +1,6 @@
 HashKnownHosts no
 ServerAliveInterval 60
 
-Host blair.matthoran.com blair
+Host ilectra.matthoran.com ilectra
   ProxyJump challenger.matthoran.com
-  Hostname blair.local
+  Hostname ilectra.local
