@@ -1,5 +1,5 @@
 alias -g PJ="|python -mjson.tool"
-export PATH=~/bin:/usr/local/go/bin:~/.npm-global/bin:/opt/android-sdk-linux/platform-tools:$HOME/.rbenv/bin:$PATH
+export PATH=~/bin:/usr/local/go/bin:~/.npm-global/bin:/opt/android-sdk-linux/platform-tools:$HOME/.rbenv/bin:~/go/bin:$PATH
 eval "$(rbenv init -)"
 alias open=xdg-open
 export RBENV_VERSION=2.4.1
