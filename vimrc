@@ -15,6 +15,7 @@ Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'ledger/vim-ledger'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
