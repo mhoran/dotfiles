@@ -42,7 +42,7 @@ set shortmess+=I
 set showmatch
 set smartcase
 set softtabstop=2
-set spell spelllang=en_us
+set spelllang=en_us
 set wildmenu
 set wildmode=list:longest,full
 set pastetoggle=<F2>
