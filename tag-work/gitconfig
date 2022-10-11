@@ -34,3 +34,5 @@
 	rebase = false
 [init]
 	templatedir = /home/mhoran/.git-template
+[pager]
+        branch = false
