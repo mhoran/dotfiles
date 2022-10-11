@@ -29,3 +29,5 @@
 	default = simple
 [pull]
 	rebase = false
+[pager]
+	branch = false
