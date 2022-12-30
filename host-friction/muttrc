@@ -6,6 +6,7 @@ set postponed=+drafts
 set record=+sent
 set sort_browser=reverse-date
 set tunnel="/usr/local/libexec/dovecot/imap 2>/dev/null"
+set header_cache=~/.cache/mutt
 
 subscribe freebsd-announce@freebsd\.org
 subscribe announce@freebsd\.org
