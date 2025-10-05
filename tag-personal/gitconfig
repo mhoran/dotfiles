@@ -31,3 +31,5 @@
 	rebase = false
 [pager]
 	branch = false
+[diff "gpg"]
+	textconv = gpg -d --quiet --yes --compress-algo=none --no-encrypt-to --batch --use-agent
