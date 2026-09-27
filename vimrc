@@ -47,6 +47,7 @@ set spelllang=en_us
 set wildmenu
 set wildmode=list:longest,full
 set pastetoggle=<F2>
+set title
 
 " Syntax highlighting
 set background=dark

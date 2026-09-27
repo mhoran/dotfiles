@@ -1,4 +1,4 @@
-case $TERM in (xterm*|rxvt)
+case $TERM in (xterm*|rxvt|tmux*)
   precmd () { print -Pn "\033]2;%m: %~\007" }
   preexec () { print -Pn "\033]2;%m: $1\a" }
 esac
