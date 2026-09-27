@@ -8,6 +8,7 @@ set sort_browser=reverse-date
 set tunnel="/usr/local/libexec/dovecot/imap 2>/dev/null"
 set header_cache=~/.cache/mutt
 
+set send_charset="us-ascii:utf-8"
 subscribe freebsd-announce@freebsd\.org
 subscribe announce@freebsd\.org
 subscribe freebsd-security@freebsd\.org
@@ -54,7 +55,6 @@ set reply_to
 set sort=threads
 set strict_threads
 set reverse_alias
-set mime_forward
 set text_flowed
 set abort_noattach=ask-yes
 unset markers
