@@ -1,1 +1,2 @@
 text/html; w3m -dump -o document_charset=%{charset} -o display_link_number=1 '%s'; nametemplate=%s.html; copiousoutput
+application/tlsrpt+gzip; gunzip; copiousoutput
